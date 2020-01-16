@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dac4b20c-39cb-4424-8ce7-905ff13833ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/battlesnake/starter/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/battlesnake/starter/Sparker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/io/battlesnake/starter/SnakeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/battlesnake/starter/SparkerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/battlesnake/snake/Snake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/battlesnake/utils/JsonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_10_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/battlesnake/starter/Sparker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/battlesnake/starter/Sparker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-snake-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/starter-snake-java.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579139644215</updated>
-      <workItem from="1579139660453" duration="4237000" />
+      <workItem from="1579139660453" duration="6058000" />
     </task>
     <servers />
   </component>
@@ -91,6 +103,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="803" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.20.1680.1010/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579139741435" />
+    <state x="751" y="362" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1579147597193">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="751" y="362" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.20.1680.1010/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579147597193" />
     <state x="649" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579146259381">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
