@@ -69,7 +69,7 @@ public class GameInstance {
 	 */
 	private void getNextMove()
 	{
-		if (self.getHead().x >= mapSize.x - 1)
+		if (self.getHead().x >= mapSize.x - 2)
 		{
 			move = Move.DOWN;
 		}
@@ -77,7 +77,7 @@ public class GameInstance {
 		{
 			move = Move.UP;
 		}
-		if (self.getHead().y >= mapSize.y - 1)
+		if (self.getHead().y >= mapSize.y - 2)
 		{
 			move = Move.LEFT;
 		}
