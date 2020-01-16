@@ -137,6 +137,7 @@ public class GameInstance {
 		System.out.println("Snake count: " + snakes.size());
 		System.out.println("Self health: " + self.getHealth());
 		System.out.println("Self pos: " + self.getHead());
+		System.out.println("Move dir: " + move);
 
 	}
 
