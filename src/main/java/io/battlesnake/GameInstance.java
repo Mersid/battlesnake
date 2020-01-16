@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import io.battlesnake.snake.Snake;
 
 import javax.vecmath.Point2i;
-import java.sql.SQLOutput;
 import java.util.*;
 
 /**
@@ -26,14 +25,14 @@ public class GameInstance {
 	 */
 	public GameInstance(JsonNode jsonNode)
 	{
-		UpdateInstance(jsonNode);
+		updateInstance(jsonNode);
 	}
 
 	/**
 	 * Updates the gameInstance variables.
 	 * @param jsonNode See ctor.
 	 */
-	public void UpdateInstance(JsonNode jsonNode)
+	public void updateInstance(JsonNode jsonNode)
 	{
 		gameId = jsonNode.get("game").get("id").asText();
 		turn = jsonNode.get("turn").asInt();
@@ -61,9 +60,32 @@ public class GameInstance {
 		}
 
 		self = new Snake(jsonNode.get("you"));
+
+		getNextMove();
 	}
 
-
+	/**
+	 * Called after updateInstance. Set the returned move here.
+	 */
+	private void getNextMove()
+	{
+		if (self.getHead().x >= mapSize.x)
+		{
+			move = Move.DOWN;
+		}
+		else if (self.getHead().x <= 0)
+		{
+			move = Move.UP;
+		}
+		else if (self.getHead().y >= mapSize.y)
+		{
+			move = Move.LEFT;
+		}
+		else if (self.getHead().y <= 0)
+		{
+			move = Move.UP;
+		}
+	}
 
 
 
@@ -109,7 +131,7 @@ public class GameInstance {
 		System.out.println("Board size: " + mapSize.x + "x" + mapSize.y);
 		System.out.println("Food pellet count: " + food.size());
 		System.out.println("Snake count: " + snakes.size());
-		System.out.println(self.getHealth());
+		System.out.println("Self health: " + self.getHealth());
 
 	}
 

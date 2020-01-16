@@ -13,6 +13,7 @@ public class Snake {
 	private String name;
 	private int health;
 	private List<Point2i> segments;
+	private Point2i head;
 
 	/**
 	 *
@@ -30,6 +31,8 @@ public class Snake {
 		{
 			segments.add(new Point2i(bodySegmentJson.get("x").asInt(), bodySegmentJson.get("y").asInt()));
 		}
+
+		head = segments.get(0);
 	}
 
 
@@ -52,6 +55,11 @@ public class Snake {
 	public List<Point2i> getSegments()
 	{
 		return Collections.unmodifiableList(segments);
+	}
+
+	public Point2i getHead()
+	{
+		return head;
 	}
 
 	@Override

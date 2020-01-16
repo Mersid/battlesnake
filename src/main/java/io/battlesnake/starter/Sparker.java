@@ -126,7 +126,7 @@ public class Sparker {
 			Map<String, String> response = new HashMap<>();
 			response.put("move", tempGameInstance.getMove().getDirectionAsString());
 
-			tempGameInstance.UpdateInstance(moveRequest);
+			tempGameInstance.updateInstance(moveRequest);
 			tempGameInstance.printInfo();
 
 			return response;
