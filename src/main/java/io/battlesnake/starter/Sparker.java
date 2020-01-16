@@ -19,10 +19,10 @@ import static spark.Spark.get;
  * Just boiler plate code.  See the readme to get started.
  * It follows the spec here: https://github.com/battlesnakeio/docs/tree/master/apis/snake
  */
-public class Snake {
+public class Sparker {
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
     private static final Handler HANDLER = new Handler();
-    private static final Logger LOG = LoggerFactory.getLogger(Snake.class);
+    private static final Logger LOG = LoggerFactory.getLogger(Sparker.class);
 
     /**
      * Main entry point.
