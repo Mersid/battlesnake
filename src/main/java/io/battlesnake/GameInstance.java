@@ -16,8 +16,9 @@ public class GameInstance {
 	private int turn;
 	private Point2i mapSize;
 	private List<Point2i> food;
-	private List<Snake> snakes;
+	private List<Snake> snakes; // All snakes, including self.
 	private Snake self;
+	private Move move = Move.UP; // When move/ is called, whatever move is defined here will be sent. Initializes to up by default.
 
 	/**
 	 *
@@ -62,6 +63,10 @@ public class GameInstance {
 		self = new Snake(jsonNode.get("you"));
 	}
 
+
+
+
+
 	public String getGameId()
 	{
 		return gameId;
@@ -92,6 +97,11 @@ public class GameInstance {
 		return self;
 	}
 
+	public Move getMove()
+	{
+		return move;
+	}
+
 	public void printInfo()
 	{
 		System.out.println("ID: " + gameId);
@@ -99,6 +109,22 @@ public class GameInstance {
 		System.out.println("Board size: " + mapSize.x + "x" + mapSize.y);
 		System.out.println("Food pellet count: " + food.size());
 		System.out.println("Snake count: " + snakes.size());
-		System.out.println(getSnakes().get(0).equals(self));
+	}
+
+	public enum Move
+	{
+		UP("up"),
+		DOWN("down"),
+		LEFT("left"),
+		RIGHT("right");
+
+		private String direction;
+		Move(String direction) {
+			this.direction = direction;
+		}
+
+		public String getDirectionAsString() {
+			return direction;
+		}
 	}
 }

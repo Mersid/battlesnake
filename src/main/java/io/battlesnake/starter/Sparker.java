@@ -3,7 +3,6 @@ package io.battlesnake.starter;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.battlesnake.GameInstance;
-import io.battlesnake.utils.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import spark.Request;
@@ -110,8 +109,10 @@ public class Sparker {
 		public Map<String, String> start(JsonNode startRequest) {
 			Map<String, String> response = new HashMap<>();
 			response.put("color", "#ff00ff");
+
 			tempGameInstance = new GameInstance(startRequest);
 			tempGameInstance.printInfo();
+
 			return response;
 		}
 
@@ -123,9 +124,11 @@ public class Sparker {
 		 */
 		public Map<String, String> move(JsonNode moveRequest) {
 			Map<String, String> response = new HashMap<>();
-			response.put("move", "right");
+			response.put("move", tempGameInstance.getMove().getDirectionAsString());
+
 			tempGameInstance.UpdateInstance(moveRequest);
 			tempGameInstance.printInfo();
+
 			return response;
 		}
 
