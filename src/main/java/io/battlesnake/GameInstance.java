@@ -73,15 +73,15 @@ public class GameInstance {
 		{
 			move = Move.DOWN;
 		}
-		else if (self.getHead().x <= 0)
+		if (self.getHead().x <= 0)
 		{
 			move = Move.UP;
 		}
-		else if (self.getHead().y >= mapSize.y)
+		if (self.getHead().y >= mapSize.y)
 		{
 			move = Move.LEFT;
 		}
-		else if (self.getHead().y <= 0)
+		if (self.getHead().y <= 0)
 		{
 			move = Move.UP;
 		}
@@ -132,6 +132,7 @@ public class GameInstance {
 		System.out.println("Food pellet count: " + food.size());
 		System.out.println("Snake count: " + snakes.size());
 		System.out.println("Self health: " + self.getHealth());
+		System.out.println("Self pos: " + self.getHead());
 
 	}
 
