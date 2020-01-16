@@ -83,7 +83,7 @@ public class GameInstance {
 		}
 		if (self.getHead().y <= 0)
 		{
-			move = Move.UP;
+			move = Move.RIGHT;
 		}
 	}
 
