@@ -72,22 +72,18 @@ public class GameInstance {
 		if (self.getHead().x >= mapSize.x - 1 && move != Move.DOWN)
 		{
 			move = Move.DOWN;
-			System.out.println(1);
 		}
 		else if (self.getHead().x <= 0 && move != Move.UP)
 		{
 			move = Move.UP;
-			System.out.println(2);
 		}
 		else if (self.getHead().y >= mapSize.y - 1 && move != Move.LEFT)
 		{
 			move = Move.LEFT;
-			System.out.println(3);
 		}
 		else if (self.getHead().y <= 0 && move != Move.RIGHT)
 		{
 			move = Move.RIGHT;
-			System.out.println(4);
 		}
 	}
 
