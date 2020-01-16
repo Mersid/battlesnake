@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dac4b20c-39cb-4424-8ce7-905ff13833ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/battlesnake/snake/Snake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/battlesnake/utils/JsonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_10_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/battlesnake/starter/Sparker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/battlesnake/starter/Sparker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter-snake-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/starter-snake-java.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +37,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RunManager">
     <configuration name="Sparker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -87,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579139644215</updated>
-      <workItem from="1579139660453" duration="6058000" />
+      <workItem from="1579139660453" duration="6280000" />
     </task>
     <servers />
   </component>
@@ -127,5 +121,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="197" key="GridCell.Tab.0.right/1920.20.1680.1010/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579144593336" />
+    <state x="461" y="163" key="SettingsEditor" timestamp="1579148418728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="163" key="SettingsEditor/1920.20.1680.1010/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579148418728" />
   </component>
 </project>
