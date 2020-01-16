@@ -1,0 +1,6 @@
+User: AWS Battlesnake
+Email: awsbattlesnake2020@gmail.com
+Pass: AWSBattlesnake2020
+
+These setting apply both to AWS EC2 and Google.
+For Heroku, add a _ to the end of password.
