@@ -24,7 +24,7 @@ public class Sparker {
 	private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
 	private static final Handler HANDLER = new Handler();
 	private static final Logger LOG = LoggerFactory.getLogger(Sparker.class);
-
+	// TODO: Allow multiple instances of game without crashing horribly. Also, fix random wall crashing.
 	/**
 	 * Main entry point.
 	 *
