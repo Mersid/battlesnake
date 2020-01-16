@@ -2,6 +2,7 @@ package io.battlesnake.starter;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.battlesnake.GameInstance;
 import io.battlesnake.utils.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,7 +53,7 @@ public class Sparker {
 	 * Handler class for dealing with the routes set up in the main method.
 	 */
 	public static class Handler {
-
+		GameInstance tempGameInstance;
 		/**
 		 * For the ping request
 		 */
@@ -109,7 +110,8 @@ public class Sparker {
 		public Map<String, String> start(JsonNode startRequest) {
 			Map<String, String> response = new HashMap<>();
 			response.put("color", "#ff00ff");
-			System.out.println("Game start");
+			tempGameInstance = new GameInstance(startRequest);
+			tempGameInstance.printInfo();
 			return response;
 		}
 
@@ -122,7 +124,8 @@ public class Sparker {
 		public Map<String, String> move(JsonNode moveRequest) {
 			Map<String, String> response = new HashMap<>();
 			response.put("move", "right");
-			System.out.println(JsonUtils.formatJson(moveRequest));
+			tempGameInstance.UpdateInstance(moveRequest);
+			tempGameInstance.printInfo();
 			return response;
 		}
 
@@ -133,8 +136,7 @@ public class Sparker {
 		 * @return responses back to the engine are ignored.
 		 */
 		public Map<String, String> end(JsonNode endRequest) {
-			Map<String, String> response = new HashMap<>();
-			return response;
+			return new HashMap<>();
 		}
 	}
 

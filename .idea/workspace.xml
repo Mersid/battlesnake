@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dac4b20c-39cb-4424-8ce7-905ff13833ca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_vecmath_vecmath_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/battlesnake/GameInstance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/battlesnake/snake/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/battlesnake/snake/Snake.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/battlesnake/starter/Sparker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/battlesnake/starter/Sparker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter-snake-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/starter-snake-java.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579139644215</updated>
-      <workItem from="1579139660453" duration="6280000" />
+      <workItem from="1579139660453" duration="13030000" />
     </task>
     <servers />
   </component>
@@ -93,6 +98,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#Project_Structure/1920.20.1680.1010/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579139884860" />
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1579159008227">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/1920.20.1680.1010/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579159008227" />
     <state x="803" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579139741435">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -125,5 +134,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.20.1680.1010/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579148418728" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1579159132608">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.20.1680.1010/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579159132608" />
   </component>
 </project>
