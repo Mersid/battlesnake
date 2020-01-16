@@ -109,6 +109,8 @@ public class GameInstance {
 		System.out.println("Board size: " + mapSize.x + "x" + mapSize.y);
 		System.out.println("Food pellet count: " + food.size());
 		System.out.println("Snake count: " + snakes.size());
+		System.out.println(self.getHealth());
+
 	}
 
 	public enum Move
