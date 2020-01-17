@@ -22,6 +22,7 @@ public class InstanceManager {
 	}
 
 	/**
+	 * Returns the GameInstance associated with the player's snakeId. The gameId is not used because multiple of this snake can be on a board.
 	 * @param snakeId The string ID of the player's snake in that instance.
 	 * @return The appropriate GameInstance, or null if it's not found.
 	 */
@@ -29,7 +30,6 @@ public class InstanceManager {
 	{
 		for (GameInstance gameInstance : gameInstances)
 		{
-			System.out.println(gameInstance.getSelf().getId());
 			if (gameInstance.getSelf().getId().equals(snakeId))
 			{
 				return gameInstance;
