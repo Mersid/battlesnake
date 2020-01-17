@@ -69,67 +69,21 @@ public class GameInstance {
 	 */
 	private void getNextMove()
 	{
-		int x = self.getHead().x;
-		int y = self.getHead().y;
-		if (x >= mapSize.x - 2 && move != Move.DOWN)
-		{
-			move = Move.DOWN;
-		}
-		else if (x <= 1 && move != Move.UP)
-		{
-			move = Move.UP;
-		}
-		else if (y >= mapSize.y - 2 && move != Move.LEFT)
-		{
-			move = Move.LEFT;
-		}
-		else if (y <= 1 && move != Move.RIGHT)
+		if (move == Move.UP)
 		{
 			move = Move.RIGHT;
 		}
-
-		else if (x == 0 || x == mapSize.x - 1 || y == 0 || y == mapSize.y - 1)
+		else if (move == Move.RIGHT)
 		{
-			// Left side.
-			if (x == 0 && y != 0 && y != mapSize.y - 1)
-			{
-				move = Move.UP;
-			}
-			// Top side
-			else if (y == 0 && x != 0 && x != mapSize.x - 1)
-			{
-				move = Move.RIGHT;
-			}
-			// Right side
-			else if (x == mapSize.x - 1 && y != 0 && y != mapSize.y - 1)
-			{
-				move = Move.DOWN;
-			}
-			// Bottom side
-			else if (y == mapSize.y - 1 && x != 0 && x != mapSize.x - 1)
-			{
-				move = Move.LEFT;
-			}
-			// Upper left corner
-			else if (x == 0 && y == 0)
-			{
-				move = Move.RIGHT;
-			}
-			// Upper right corner
-			else if (x == mapSize.x - 1 && y == 0)
-			{
-				move = Move.DOWN;
-			}
-			// Bottom right corner
-			else if (x == mapSize.x - 1 && y == mapSize.y - 1)
-			{
-				move = Move.LEFT;
-			}
-			// Bottom left corner
-			else if (x == 0 && y == mapSize.y - 1)
-			{
-				move = Move.UP;
-			}
+			move = Move.DOWN;
+		}
+		else if (move == Move.DOWN)
+		{
+			move = Move.LEFT;
+		}
+		else if (move == Move.LEFT)
+		{
+			move = Move.UP;
 		}
 	}
 
