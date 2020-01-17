@@ -18,6 +18,7 @@ public class GameInstance {
 	private List<Snake> snakes; // All snakes, including self.
 	private Snake self;
 	private Move move = Move.UP; // When move/ is called, whatever move is defined here will be sent. Initializes to up by default.
+	private long timeSinceLastCheck; // Use getTimeSinceLastCheck() to get last checked time in ms.
 
 	/**
 	 *
@@ -34,6 +35,7 @@ public class GameInstance {
 	 */
 	public void updateInstance(JsonNode jsonNode)
 	{
+		timeSinceLastCheck = System.currentTimeMillis();
 		gameId = jsonNode.get("game").get("id").asText();
 		turn = jsonNode.get("turn").asInt();
 
@@ -88,6 +90,13 @@ public class GameInstance {
 	}
 
 
+	public long getTimeSinceLastCheck()
+	{
+		long currentTime = System.currentTimeMillis();
+		long elapsed = currentTime - timeSinceLastCheck;
+		timeSinceLastCheck = currentTime;
+		return elapsed;
+	}
 
 	public String getGameId()
 	{
@@ -134,6 +143,7 @@ public class GameInstance {
 		System.out.println("Self health: " + self.getHealth());
 		System.out.println("Self pos: " + self.getHead());
 		System.out.println("Move direction: " + move);
+		System.out.println("Last pinged: " + getTimeSinceLastCheck() + " ms");
 	}
 
 	@Override
