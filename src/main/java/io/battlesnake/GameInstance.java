@@ -123,7 +123,7 @@ public class GameInstance {
 			// Bottom right corner
 			else if (x == mapSize.x - 1 && y == mapSize.y - 1)
 			{
-				move = Move.UP;
+				move = Move.LEFT;
 			}
 			// Bottom left corner
 			else if (x == 0 && y == mapSize.y - 1)
