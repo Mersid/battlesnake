@@ -136,7 +136,7 @@ public class GameInstance {
 		System.out.println("Move direction: " + move);
 		long swTime = stopWatch.getTime();
 		System.out.println("Last print: " + swTime + " ms ago.");
-		if (swTime >= 500) System.out.println("WARNING: More than 500 ms elapsed since last call. This response will have been ignored by the server.");
+		if (swTime >= 500) System.out.println("WARNING: More than 500 ms elapsed since last call. This response will have been ignored by the server, or recorded for the next move.");
 		stopWatch.reset();
 		stopWatch.start();
 	}
