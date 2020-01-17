@@ -22,15 +22,14 @@ public class InstanceManager {
 	}
 
 	/**
-	 *
-	 * @param id The string ID of the instance to return.
+	 * @param snakeId The string ID of the player's snake in that instance.
 	 * @return The appropriate GameInstance, or null if it's not found.
 	 */
-	public GameInstance getGameInstanceFromId(String id)
+	public GameInstance getGameInstanceFromId(String snakeId)
 	{
 		for (GameInstance gameInstance : gameInstances)
 		{
-			if (gameInstance.getGameId().equals(id))
+			if (gameInstance.getSelf().getId().equals(snakeId))
 			{
 				return gameInstance;
 			}

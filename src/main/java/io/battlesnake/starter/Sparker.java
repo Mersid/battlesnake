@@ -125,11 +125,11 @@ public class Sparker {
 		public Map<String, String> move(JsonNode moveRequest) {
 			Map<String, String> response = new HashMap<>();
 
-			String routeToId = moveRequest.get("game").get("id").asText();
+			String routeToId = moveRequest.get("you").get("id").asText();
 			GameInstance gameInstance = instanceManager.getGameInstanceFromId(routeToId);
 			gameInstance.updateInstance(moveRequest);
 			gameInstance.printInfo();
-			System.out.println(instanceManager.getInstanceCount());
+
 			response.put("move", gameInstance.getMove().getDirectionAsString());
 			return response;
 		}
