@@ -136,6 +136,7 @@ public class GameInstance {
 		System.out.println("Move direction: " + move);
 		System.out.println("Last print: " + stopWatch.getTime());
 		stopWatch.reset();
+		stopWatch.start();
 	}
 
 	@Override
