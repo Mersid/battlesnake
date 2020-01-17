@@ -129,7 +129,7 @@ public class Sparker {
 			GameInstance gameInstance = instanceManager.getGameInstanceFromId(routeToId);
 			gameInstance.updateInstance(moveRequest);
 			gameInstance.printInfo();
-
+			System.out.println(instanceManager.getInstanceCount());
 			response.put("move", gameInstance.getMove().getDirectionAsString());
 			return response;
 		}

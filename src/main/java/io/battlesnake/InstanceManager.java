@@ -37,4 +37,9 @@ public class InstanceManager {
 		}
 		return null;
 	}
+
+	public int getInstanceCount()
+	{
+		return gameInstances.size();
+	}
 }
