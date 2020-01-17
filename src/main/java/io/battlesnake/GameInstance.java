@@ -142,7 +142,10 @@ public class GameInstance {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		GameInstance that = (GameInstance) o;
-		return Objects.equals(gameId, that.gameId);
+		return turn == that.turn &&
+				Objects.equals(gameId, that.gameId) &&
+				Objects.equals(mapSize, that.mapSize) &&
+				Objects.equals(self, that.self);
 	}
 
 	public enum Move
