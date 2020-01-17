@@ -69,19 +69,19 @@ public class GameInstance {
 	 */
 	private void getNextMove()
 	{
-		if ((self.getHead().x >= mapSize.x - 2 && move != Move.DOWN) || self.getHead().x >= mapSize.x - 1)
+		if (self.getHead().x >= mapSize.x - 2)
 		{
 			move = Move.DOWN;
 		}
-		else if ((self.getHead().x <= 1 && move != Move.UP) || self.getHead().x <= 0)
+		else if (self.getHead().x <= 1)
 		{
 			move = Move.UP;
 		}
-		else if ((self.getHead().y >= mapSize.y - 2 && move != Move.LEFT) || self.getHead().y >= mapSize.y - 1)
+		else if (self.getHead().y >= mapSize.y - 2)
 		{
 			move = Move.LEFT;
 		}
-		else if ((self.getHead().y <= 1 && move != Move.RIGHT) || self.getHead().y <= 0)
+		else if (self.getHead().y <= 1)
 		{
 			move = Move.RIGHT;
 		}
