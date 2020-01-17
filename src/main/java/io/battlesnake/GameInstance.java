@@ -34,7 +34,7 @@ public class GameInstance {
 	 */
 	public void updateInstance(JsonNode jsonNode)
 	{
-		gameId = jsonNode.get("game").get("id").asText();;
+		gameId = jsonNode.get("game").get("id").asText();
 		turn = jsonNode.get("turn").asInt();
 
 		JsonNode boardNode = jsonNode.get("board");
