@@ -134,7 +134,9 @@ public class GameInstance {
 		System.out.println("Self health: " + self.getHealth());
 		System.out.println("Self pos: " + self.getHead());
 		System.out.println("Move direction: " + move);
-		System.out.println("Last print: " + stopWatch.getTime());
+		long swTime = stopWatch.getTime();
+		System.out.println("Last print: " + swTime + " ms ago.");
+		if (swTime >= 500) System.out.println("WARNING: More than 500 ms elapsed since last call. This response will have been ignored by the server.");
 		stopWatch.reset();
 		stopWatch.start();
 	}
