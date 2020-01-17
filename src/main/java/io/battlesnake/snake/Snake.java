@@ -21,8 +21,8 @@ public class Snake {
 	 */
 	public Snake(JsonNode jsonNode)
 	{
-		id = jsonNode.get("id").toString();
-		name = jsonNode.get("name").toString();
+		id = jsonNode.get("id").asText();
+		name = jsonNode.get("name").asText();
 		health = jsonNode.get("health").asInt();
 		segments = new ArrayList<>();
 
