@@ -29,6 +29,7 @@ public class InstanceManager {
 	{
 		for (GameInstance gameInstance : gameInstances)
 		{
+			System.out.println(gameInstance.getSelf().getId());
 			if (gameInstance.getSelf().getId().equals(snakeId))
 			{
 				return gameInstance;
