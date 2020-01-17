@@ -127,6 +127,7 @@ public class Sparker {
 
 			String routeToId = moveRequest.get("you").get("id").asText();
 			GameInstance gameInstance = instanceManager.getGameInstanceFromId(routeToId);
+			System.out.println("Self ID: " + routeToId);
 			System.out.println("Game instance: " + gameInstance);
 			gameInstance.updateInstance(moveRequest);
 			gameInstance.printInfo();
