@@ -88,7 +88,7 @@ public class GameInstance {
 			move = Move.RIGHT;
 		}
 
-		if (x == 0 || x == mapSize.x - 1 || y == 0 || y == mapSize.y - 1)
+		else if (x == 0 || x == mapSize.x - 1 || y == 0 || y == mapSize.y - 1)
 		{
 			// Left side.
 			if (x == 0 && y != 0 && y != mapSize.y - 1)
