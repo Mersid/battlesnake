@@ -3,6 +3,7 @@ package io.battlesnake.starter;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.battlesnake.GameInstance;
+import io.battlesnake.InstanceManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import spark.Request;
@@ -24,7 +25,8 @@ public class Sparker {
 	private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
 	private static final Handler HANDLER = new Handler();
 	private static final Logger LOG = LoggerFactory.getLogger(Sparker.class);
-	// TODO: Allow multiple instances of game without crashing horribly. Also, fix random wall crashing.
+	private static final InstanceManager instanceManager = new InstanceManager();
+
 	/**
 	 * Main entry point.
 	 *
@@ -52,7 +54,6 @@ public class Sparker {
 	 * Handler class for dealing with the routes set up in the main method.
 	 */
 	public static class Handler {
-		GameInstance tempGameInstance;
 		/**
 		 * For the ping request
 		 */
@@ -110,8 +111,7 @@ public class Sparker {
 			Map<String, String> response = new HashMap<>();
 			response.put("color", "#ff00ff");
 
-			tempGameInstance = new GameInstance(startRequest);
-			tempGameInstance.printInfo();
+			instanceManager.addGame(new GameInstance(startRequest));
 
 			return response;
 		}
@@ -125,10 +125,11 @@ public class Sparker {
 		public Map<String, String> move(JsonNode moveRequest) {
 			Map<String, String> response = new HashMap<>();
 
-			tempGameInstance.updateInstance(moveRequest);
-			tempGameInstance.printInfo();
+			String routeToId = moveRequest.get("game").get("id").asText();
+			GameInstance gameInstance = instanceManager.getGameInstanceFromId(routeToId);
+			gameInstance.updateInstance(moveRequest);
 
-			response.put("move", tempGameInstance.getMove().getDirectionAsString());
+			response.put("move", gameInstance.getMove().getDirectionAsString());
 			return response;
 		}
 

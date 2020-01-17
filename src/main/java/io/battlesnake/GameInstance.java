@@ -134,7 +134,15 @@ public class GameInstance {
 		System.out.println("Self health: " + self.getHealth());
 		System.out.println("Self pos: " + self.getHead());
 		System.out.println("Move direction: " + move);
+	}
 
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		GameInstance that = (GameInstance) o;
+		return Objects.equals(gameId, that.gameId);
 	}
 
 	public enum Move
