@@ -128,6 +128,7 @@ public class Sparker {
 			String routeToId = moveRequest.get("game").get("id").asText();
 			GameInstance gameInstance = instanceManager.getGameInstanceFromId(routeToId);
 			gameInstance.updateInstance(moveRequest);
+			gameInstance.printInfo();
 
 			response.put("move", gameInstance.getMove().getDirectionAsString());
 			return response;
