@@ -144,6 +144,7 @@ public class GameInstance {
 		System.out.println("Self pos: " + self.getHead());
 		System.out.println("Move direction: " + move);
 		System.out.println("Last pinged: " + getTimeSinceLastCheck() + " ms");
+		System.out.println("Current time: " + System.currentTimeMillis());
 	}
 
 	@Override
