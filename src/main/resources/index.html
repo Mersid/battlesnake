@@ -8,9 +8,20 @@ Battlesnake documentation can be found at <a href="https://docs.battlesnake.io">
 	function buttonPressed()
 	{
 		var xhr = new XMLHttpRequest();
+
+		xhr.onreadystatechange = callback()
+
 		xhr.open("POST", "http://battlesnake.us-west-2.elasticbeanstalk.com/internal", true);
-		xhr.send(JSON.stringify({"Key" : "Value"}))
+		xhr.send(JSON.stringify({"Key" : "Value"}));
 
 		alert("Button pressed");
+	}
+
+	function callback()
+	{
+		if (this.status == 200)
+		{
+			alert(JSON.parse(this.responseText));
+		}
 	}
 </script>
