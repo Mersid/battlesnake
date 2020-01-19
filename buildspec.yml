@@ -1,4 +1,4 @@
-# https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started-create-build-spec-console.html
+# https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started-create-build-spec-console.html 
 
 version: 0.2
 
