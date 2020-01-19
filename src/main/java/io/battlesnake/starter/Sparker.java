@@ -9,6 +9,10 @@ import org.slf4j.LoggerFactory;
 import spark.Request;
 import spark.Response;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,9 +52,10 @@ public class Sparker {
 	}
 
 	public static class StaticHandler {
-		private static String process(Request req, Response res)
+		private static String process(Request req, Response res) throws URISyntaxException, IOException
 		{
-			return "Battlesnake documentation can be found at <a href=\"https://docs.battlesnake.io\">https://docs.battlesnake.io</a>. I welcome you!";
+			return new String(Files.readAllBytes(Paths.get(StaticHandler.class.getResource("index.html").toURI())));
+			//return "Battlesnake documentation can be found at <a href=\"https://docs.battlesnake.io\">https://docs.battlesnake.io</a>. I welcome you!";
 		}
 	}
 
