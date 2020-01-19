@@ -59,7 +59,7 @@ public class Sparker {
 			System.out.println(res);
 			System.out.println(req.uri());
 			System.out.println(JsonUtils.formatJson(JSON_MAPPER.readTree(req.body())));
-			return null;
+			return "Hi";
 			//return "Battlesnake documentation can be found at <a href=\"https://docs.battlesnake.io\">https://docs.battlesnake.io</a>. I welcome you!";
 		}
 	}
