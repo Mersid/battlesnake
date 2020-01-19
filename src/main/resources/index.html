@@ -9,19 +9,24 @@ Battlesnake documentation can be found at <a href="https://docs.battlesnake.io">
 	{
 		var xhr = new XMLHttpRequest();
 
-		xhr.onreadystatechange = callback()
+		xhr.onreadystatechange = function() {
+			alert(xhr.status)
+			alert(JSON.parse(xhr.responseText));
+		}
 
 		xhr.open("POST", "http://battlesnake.us-west-2.elasticbeanstalk.com/internal", true);
+		xhr.setRequestHeader('Content-Type', 'application/json');
 		xhr.send(JSON.stringify({"Key" : "Value"}));
 
 		alert("Button pressed");
 	}
 
-	function callback()
+	function callback(xhr)
 	{
-		if (this.status == 200)
+		alert(xhr.responseText)
+		if (xhr.status == 200)
 		{
-			alert(JSON.parse(this.responseText));
+			alert(JSON.parse(xhr.responseText));
 		}
 	}
 </script>

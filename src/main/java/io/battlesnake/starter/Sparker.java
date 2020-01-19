@@ -54,6 +54,7 @@ public class Sparker {
 	public static class StaticHandler {
 		private static String process(Request req, Response res) throws URISyntaxException, IOException
 		{
+			res.header("Access-Control-Allow-Origin", "*");
 
 			System.out.println(req);
 			System.out.println(res);
