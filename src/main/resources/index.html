@@ -8,8 +8,6 @@ Battlesnake documentation can be found at <a href="https://docs.battlesnake.io">
 		var xhr = new XMLHttpRequest();
 
 		xhr.onreadystatechange = function() {
-				alert(xhr.responseText);
-				alert(JSON.parse(xhr.responseText));
 			if (xhr.status == 200 && xhr.readyState == 4)
 			{
 				alert(xhr.responseText);
