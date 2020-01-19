@@ -12,9 +12,7 @@ import spark.Response;
 import java.util.HashMap;
 import java.util.Map;
 
-import static spark.Spark.port;
-import static spark.Spark.post;
-import static spark.Spark.get;
+import static spark.Spark.*;
 
 /**
  * Snake server that deals with requests from the snake engine.
@@ -41,7 +39,7 @@ public class Sparker {
 			port = "5000";
 		}
 		port(Integer.parseInt(port));
-
+		staticFileLocation("/");
 		get("/", StaticHandler::process);
 		post("/start", HANDLER::process, JSON_MAPPER::writeValueAsString);
 		post("/ping", HANDLER::process, JSON_MAPPER::writeValueAsString);
