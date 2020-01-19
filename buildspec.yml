@@ -8,7 +8,7 @@ phases:
       java: corretto8
   pre_build:
     commands:
-      - echo Nothing to do in the pre_build phase...
+      - echo Build started!
   build:
     commands:
       - mvn install
