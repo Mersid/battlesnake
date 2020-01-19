@@ -52,16 +52,19 @@ public class Sparker {
 	}
 
 	public static class StaticHandler {
-		private static String process(Request req, Response res) throws URISyntaxException, IOException
+		private static Map<String, String> process(Request req, Response res) throws URISyntaxException, IOException
 		{
+			Map<String, String> responseMap = new HashMap<>();
+
 			res.header("Access-Control-Allow-Origin", "*");
 
 			System.out.println(req);
 			System.out.println(res);
 			System.out.println(req.uri());
 			System.out.println(JsonUtils.formatJson(JSON_MAPPER.readTree(req.body())));
-			return "Hi";
-			//return "Battlesnake documentation can be found at <a href=\"https://docs.battlesnake.io\">https://docs.battlesnake.io</a>. I welcome you!";
+
+			responseMap.put("Returnkey", "Returnvalue");
+			return responseMap;
 		}
 	}
 
