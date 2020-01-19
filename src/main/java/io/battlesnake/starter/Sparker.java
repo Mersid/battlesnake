@@ -44,7 +44,7 @@ public class Sparker {
 		}
 		port(Integer.parseInt(port));
 		staticFileLocation("/");
-		get("/", StaticHandler::process);
+		get("/", (req, res) -> {res.redirect("/index.html"); return null;});
 		post("/start", HANDLER::process, JSON_MAPPER::writeValueAsString);
 		post("/ping", HANDLER::process, JSON_MAPPER::writeValueAsString);
 		post("/move", HANDLER::process, JSON_MAPPER::writeValueAsString);
