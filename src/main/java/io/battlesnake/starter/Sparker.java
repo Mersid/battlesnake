@@ -42,7 +42,7 @@ public class Sparker {
 		}
 		port(Integer.parseInt(port));
 
-		get("/", (req, res) -> StaticHandler.process(req, res));
+		get("/", StaticHandler::process);
 		post("/start", HANDLER::process, JSON_MAPPER::writeValueAsString);
 		post("/ping", HANDLER::process, JSON_MAPPER::writeValueAsString);
 		post("/move", HANDLER::process, JSON_MAPPER::writeValueAsString);
@@ -52,7 +52,7 @@ public class Sparker {
 	public static class StaticHandler {
 		private static String process(Request req, Response res)
 		{
-			return "Battlesnake documentation can be found at <a href=\"https://docs.battlesnake.io\">https://docs.battlesnake.io</a>.";
+			return "Battlesnake documentation can be found at <a href=\"https://docs.battlesnake.io\">https://docs.battlesnake.io</a>. I welcome you!";
 		}
 	}
 
