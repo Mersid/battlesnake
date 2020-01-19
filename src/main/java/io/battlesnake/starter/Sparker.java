@@ -38,7 +38,7 @@ public class Sparker {
 			LOG.info("Found system provided port: {}", port);
 		} else {
 			LOG.info("Using default port: {}", port);
-			port = "8080";
+			port = "5000";
 		}
 		port(Integer.parseInt(port));
 
