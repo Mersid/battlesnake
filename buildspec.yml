@@ -5,17 +5,16 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk11
+      java: corretto8
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - echo Build started on `date`
       - mvn install
   post_build:
     commands:
-      - echo Build completed on `date`
+      - mv target/starter-snake-java.jar starter-snake-java.jar
 artifacts:
   files:
-    - target/starter-snake-java.jar
+    - starter-snake-java.jar
