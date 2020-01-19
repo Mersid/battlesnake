@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.battlesnake.GameInstance;
 import io.battlesnake.InstanceManager;
+import io.battlesnake.utils.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import spark.Request;
@@ -11,8 +12,6 @@ import spark.Response;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -49,12 +48,18 @@ public class Sparker {
 		post("/ping", HANDLER::process, JSON_MAPPER::writeValueAsString);
 		post("/move", HANDLER::process, JSON_MAPPER::writeValueAsString);
 		post("/end", HANDLER::process, JSON_MAPPER::writeValueAsString);
+		post("/internal", StaticHandler::process, JSON_MAPPER::writeValueAsString);
 	}
 
 	public static class StaticHandler {
 		private static String process(Request req, Response res) throws URISyntaxException, IOException
 		{
-			return new String(Files.readAllBytes(Paths.get(StaticHandler.class.getResource("index.html").toURI())));
+
+			System.out.println(req);
+			System.out.println(res);
+			System.out.println(req.uri());
+			System.out.println(JsonUtils.formatJson(JSON_MAPPER.readTree(req.body())));
+			return null;
 			//return "Battlesnake documentation can be found at <a href=\"https://docs.battlesnake.io\">https://docs.battlesnake.io</a>. I welcome you!";
 		}
 	}
