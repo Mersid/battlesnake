@@ -4,6 +4,6 @@ public class Pathfinder {
 
 	public Path pathTo()
 	{
-		
+		return new Path();
 	}
 }
