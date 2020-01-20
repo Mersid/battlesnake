@@ -2,6 +2,7 @@ package io.battlesnake;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import io.battlesnake.snake.Snake;
+import io.battlesnake.snake.pathing.Move;
 import org.apache.commons.lang3.time.StopWatch;
 
 import javax.vecmath.Point2i;
@@ -10,6 +11,7 @@ import java.util.*;
 /**
  * Represents a instance of Battlesnake, that is, an entire game.
  * It turns out that multiple games can be played simultaneously.
+ * It also holds all the logic for our bot.
  */
 public class GameInstance {
 	private String gameId;
@@ -153,20 +155,5 @@ public class GameInstance {
 				Objects.equals(self, that.self);
 	}
 
-	public enum Move
-	{
-		UP("up"),
-		DOWN("down"),
-		LEFT("left"),
-		RIGHT("right");
 
-		private String direction;
-		Move(String direction) {
-			this.direction = direction;
-		}
-
-		public String getDirectionAsString() {
-			return direction;
-		}
-	}
 }
